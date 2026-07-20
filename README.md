@@ -21,10 +21,13 @@ Construir pipeline de ingestão (camada Bronze) com boas práticas de dados.
 ## Estrutura
 
 formula1-lakehouse-databricks/
+
 ├── notebooks/
 │   └── 01_ingestion_bronze.ipynb
+
 ├── images/
 │   └── bronze-validation.png
+
 ├── .gitignore
 └── README.md
 
