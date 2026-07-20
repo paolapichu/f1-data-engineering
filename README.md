@@ -1,18 +1,18 @@
-# 🏎️ F1 Data Engineering Project
+# F1 Data Engineering Project
 
 Projeto de Engenharia de Dados desenvolvido no Azure Databricks, utilizando dados históricos da Fórmula 1 para construir a camada Bronze de um Data Lakehouse.
 
-## 📌 Sobre o projeto
+## Sobre o projeto
 
 O projeto implementa um pipeline de ingestão de dados utilizando PySpark e Delta Lake, aplicando tipagem rígida, padronização de colunas e rastreabilidade da carga.
 
 Os dados utilizados pertencem ao dataset público **Formula 1 World Championship (1950–Atual)**, disponibilizado no Kaggle.
 
-## 🎯 Objetivo
+## Objetivo
 
 Construir a primeira etapa de uma arquitetura Lakehouse, realizando a ingestão de arquivos CSV na camada Bronze sem utilizar inferência automática de schema.
 
-## 🗂️ Dados utilizados
+## Dados utilizados
 
 Foram utilizados os seguintes arquivos:
 
@@ -22,7 +22,7 @@ Foram utilizados os seguintes arquivos:
 
 > Os arquivos CSV não estão incluídos neste repositório. Eles podem ser obtidos diretamente no Kaggle.
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - Azure Databricks
 - Apache Spark
@@ -31,7 +31,7 @@ Foram utilizados os seguintes arquivos:
 - Python
 - Git e GitHub
 
-## ⚙️ Etapas realizadas
+## Etapas realizadas
 
 1. Upload dos arquivos CSV para um Volume no Databricks;
 2. Leitura dos arquivos utilizando PySpark;
@@ -42,7 +42,7 @@ Foram utilizados os seguintes arquivos:
 7. Gravação dos DataFrames no formato Delta Lake;
 8. Validação dos dados gravados na camada Bronze.
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 O fluxo de ingestão implementado foi:
 
@@ -58,7 +58,7 @@ Camada Bronze em Delta Lake
 
 A camada raw preserva os arquivos originais, enquanto a camada Bronze armazena os dados tipados, padronizados e acompanhados do timestamp de ingestão.
 
-📁 Estrutura do repositório
+Estrutura do repositório
 
 formula1-lakehouse-databricks/
 
@@ -71,7 +71,7 @@ formula1-lakehouse-databricks/
 ├── .gitignore
 └── README.md
 
-✅ Resultado
+Resultado
 
 Foram criados três conjuntos de dados no formato Delta:
 
@@ -85,15 +85,17 @@ bronze_f1/
 
 Cada conjunto possui schema definido manualmente, colunas padronizadas e informações de auditoria sobre o momento da ingestão.
 
-💡 Principais aprendizados
-Processamento distribuído com Apache Spark;
-Criação de schemas rígidos no PySpark;
-Organização das zonas Raw e Bronze;
-Aplicação da arquitetura Medallion;
-Gravação e leitura de dados em Delta Lake;
-Inclusão de metadados para rastreabilidade;
-Organização de um projeto de Engenharia de Dados.
+Principais aprendizados
 
-🚀 Próximas etapas
-Arquitetura Medalhão e Cruzamentos (Camadas Prata e Ouro)
-Objetivo: Transformar dados brutos em tabelas relacionais limpas (Prata) e, em seguida, consolidar métricas de alto valor para o negócio (Ouro), orquestrando o fluxo de ponta a ponta.
+- Processamento distribuído com Apache Spark.
+- Criação de schemas rígidos no PySpark.
+- Organização das zonas Raw e Bronze.
+- Aplicação da arquitetura Medallion.
+- Gravação e leitura de dados em Delta Lake.
+- Inclusão de metadados para rastreabilidade.
+- Organização de um projeto de Engenharia de Dados.
+
+Próximas etapas
+
+- Arquitetura Medalhão e Cruzamentos (Camadas Prata e Ouro).
+- Objetivo: Transformar dados brutos em tabelas relacionais limpas (Prata) e, em seguida, consolidar métricas de alto valor para o negócio (Ouro), orquestrando o fluxo de ponta a ponta.
