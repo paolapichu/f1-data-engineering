@@ -20,8 +20,13 @@ Construir pipeline de ingestão (camada Bronze) com boas práticas de dados.
 
 ## Estrutura
 
-notebooks/
-└── 01_ingestion_bronze.ipynb
+formula1-lakehouse-databricks/
+├── notebooks/
+│   └── 01_ingestion_bronze.ipynb
+├── images/
+│   └── bronze-validation.png
+├── .gitignore
+└── README.md
 
 ## 💡 Aprendizados
 - Uso de Spark para processamento de dados
