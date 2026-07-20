@@ -61,10 +61,13 @@ A camada raw preserva os arquivos originais, enquanto a camada Bronze armazena o
 📁 Estrutura do repositório
 
 formula1-lakehouse-databricks/
+
 ├── notebooks/
 │   └── 01_ingestion_bronze.ipynb
+
 ├── images/
 │   └── bronze-validation.png
+
 ├── .gitignore
 └── README.md
 
@@ -73,8 +76,11 @@ formula1-lakehouse-databricks/
 Foram criados três conjuntos de dados no formato Delta:
 
 bronze_f1/
+
 ├── drivers/
+
 ├── races/
+
 └── lap_times/
 
 Cada conjunto possui schema definido manualmente, colunas padronizadas e informações de auditoria sobre o momento da ingestão.
